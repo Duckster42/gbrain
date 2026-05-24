@@ -1,0 +1,35 @@
+{
+  "review_id": "RIVET_GBRAIN_MEMORY_PATTERN_REVIEW_V0_1",
+  "generated_utc": "2026-05-24",
+  "mode": "static_full_system_review_deepening",
+  "scope": "whole-repo",
+  "safety": {
+    "executed_gbrain": false,
+    "installed_deps": false,
+    "ran_tests": false,
+    "started_services": false,
+    "db_connections": false,
+    "external_api_calls": false
+  },
+  "required_outputs": [
+    "review_summary.md",
+    "gbrain_system_architecture_review.md",
+    "gbrain_memory_layout_review.md",
+    "gbrain_database_index_review.md",
+    "gbrain_graph_model_review.md",
+    "gbrain_retrieval_search_review.md",
+    "gbrain_enrichment_pipeline_review.md",
+    "gbrain_consolidation_review.md",
+    "gbrain_skills_workflow_review.md",
+    "gbrain_mcp_tooling_review.md",
+    "gbrain_security_runtime_review.md",
+    "gbrain_tests_evals_review.md",
+    "gbrain_scripts_review.md",
+    "duckmemory_gbrain_parity_matrix.md",
+    "duckmemory_behavior_parity_targets.md",
+    "duckmemory_patterns_to_adopt.md",
+    "duckmemory_patterns_to_reject_or_replace.md",
+    "duckmemory_cleanroom_spec_inputs.md",
+    "next_stage_recommendation.md"
+  ]
+}
