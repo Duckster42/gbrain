@@ -1,0 +1,9 @@
+# 15 Evidence Gap Register
+
+| Gap ID | Gap | Why It Matters | Files Checked | What Was Not Found | DuckMemory Risk | Follow-Up Needed | Can Spec Proceed | Blocking |
+|---|---|---|---|---|---|---|---|---|
+| GAP-001 | Runtime retrieval quality claims are not statically provable | Ranking quality cannot be guaranteed from static read | `src/core/search/hybrid.ts`, `src/core/search/vector.ts`, `test/search/*` | No executed benchmark results in this review | Overfitting architecture without quality proof | Run retrieval eval suite in dedicated runtime stage | conditional | yes |
+| GAP-002 | Real migration safety on live data | Static migration code does not prove zero-downtime behavior | `src/core/migrate.ts`, `src/core/postgres-engine.ts`, `src/commands/apply-migrations.ts` | No runtime migration replay in this stage | Production breakage risk | Perform migration replay + rollback drill | conditional | yes |
+| GAP-003 | MCP transport hardening under load | Rate-limit code exists but runtime envelope unknown | `src/mcp/rate-limit.ts`, `src/mcp/server.ts` | No load-test evidence | DoS and starvation risk | Run MCP soak/load tests | conditional | no |
+| GAP-004 | Consolidation correctness across contradictions | Static pathways found; outcome quality unknown | `src/commands/doctor.ts`, `src/core/facts/*`, `src/core/trajectory-format.ts` | No contradiction-resolution runtime traces | Wrong supersession behavior | Add contradiction fixtures and replay tests | conditional | yes |
+| GAP-005 | Skills docs-to-code parity | Many skill rules are documentation contracts | `skills/RESOLVER.md`, `skills/conventions/brain-routing.md`, `src/commands/skillify*.ts` | No single enforced runtime contract for all skill docs | Policy drift | Add machine-checkable skill contract tests | conditional | no |
